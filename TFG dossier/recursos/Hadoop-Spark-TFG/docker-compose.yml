@@ -1,0 +1,64 @@
+version: "3"
+services:
+  
+  node1:
+    image: datanode-tfg
+    container_name: node1
+    hostname: node1
+    networks:
+      hadoop:
+        aliases:
+          - node1
+    ports:
+      - "9864:9864"
+      - "9866:9866"
+    #command: jps && tail -f /dev/null
+    command: tail -f /dev/null
+
+  node2:
+    image: datanode-tfg
+    container_name: node2
+    hostname: node2
+    networks:
+      hadoop:
+        aliases:
+          - node2
+    #command: jps && tail -f /dev/null
+    command: tail -f /dev/null
+
+  namenode:
+    image: namenode-tfg
+    container_name: namenode
+    hostname: namenode
+    ports:
+      - "8020:8020"
+      - "9870:9870"
+      - "8088:8088"
+    networks:
+      hadoop:
+        aliases:
+          - namenode
+    depends_on:
+      - node1
+      - node2
+    #command: jps
+
+  spark:
+    image: spark-tfg
+    container_name: spark
+    hostname: spark
+    ports:
+      - "4044:4044"
+    networks:
+      hadoop:
+        aliases:
+          - spark
+    links:
+      - namenode
+    depends_on:
+      - namenode
+    #command: jps && tail -f /dev/null
+    command: tail -f /dev/null
+
+networks:
+  hadoop:

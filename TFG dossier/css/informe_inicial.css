@@ -1,0 +1,14 @@
+p {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+body {
+	margin-left: 2%;
+	margin-top: 1%;
+	margin-bottom: 3%;
+}
+
+.text-tfg{
+	margin-right: 8%;
+}

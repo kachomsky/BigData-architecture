@@ -1,0 +1,35 @@
+<configuration>
+    <property>
+      <name>yarn.acl.enable</name>
+      <value>0</value>
+    </property>
+
+    <property>
+      <name>yarn.resourcemanager.hostname</name>
+      <value>namenode</value>
+    </property>
+
+    <property>
+      <name>yarn.nodemanager.resource.memory-mb</name>
+      <value>55296</value> <!-- 54 Gibibit RAM -->
+      <description>Total de memoria fisica que pot ser assignada per als containers, per al total de containers</description>
+    </property>
+
+    <property>
+      <name>yarn.scheduler.minimum-allocation-mb</name>
+      <value>2048</value>
+      <description>Minima RAM que es assignada a un container</description>
+    </property>
+
+    <property>
+      <name>yarn.scheduler.maximum-allocation-mb</name>
+      <value>55296</value>
+      <description>Maxima RAM que pot ser assignada a un container</description>
+    </property>
+
+    <property>
+      <name>yarn.scheduler.maximum-allocation-vcores</name>
+      <value>5</value>
+      <description>Maxima asignacio de virtual cores</description>
+    </property>
+</configuration>

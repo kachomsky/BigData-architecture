@@ -1,0 +1,13 @@
+-datanode : 9864/tcp
+-namenode : 9870/tcp
+-yarn-resources (all aplications) : 8088/tcp
+-Spark executions : 4040/tcp
+
+cluster DCCCLUSTER:
+8020 - 52470
+9870 - 52471
+8088 - 52472
+4044 - 52473
+8080 - 52474
+9000 - 52475 
+9864 - 52476

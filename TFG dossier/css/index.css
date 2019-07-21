@@ -1,0 +1,16 @@
+/*OL { counter-reset: item }*/
+LI { display: block }
+/*LI:before { content: counters(item, ".") " "; counter-increment: item }*/
+body {
+	margin-left: 2%;
+	margin-top: 1%;
+}
+
+p {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#resum-inicial{
+	margin-right: 8%;
+}
